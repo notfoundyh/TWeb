@@ -56,3 +56,6 @@ listas não ordenadas        <!--   tópicos com bolinhas por exemplo -->
 listas ordenadas        <!--   tópicos 1,2,3 ou abc -->
 listas de definições
 tabelas <table>
+http://validator.w3.org //corrige o codigo
+
+Ao criar um ficheiro html se fizermos !+tab o visual studio da  estrutura incial
