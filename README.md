@@ -58,4 +58,4 @@ listas de definições
 tabelas <table>
 http://validator.w3.org //corrige o codigo
 
-Ao criar um ficheiro html se fizermos !+tab o visual studio da  estrutura incial
+Ao criar um ficheiro html se fizermos !+tab o visual studio da  estrutura incial 
