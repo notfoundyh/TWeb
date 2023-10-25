@@ -1,0 +1,19 @@
+
+
+#europa{
+    color: blue;
+}
+
+p{
+    color: green;
+}
+.urgent{
+    color: red
+}
+.novo{
+    background-color: yellow;
+}
+
+.urgent.novo{
+    font-size: 100px;
+}

@@ -67,3 +67,50 @@ CSS - linguagem de controlo de aparência, layout e apresentação
 3. Num ficheiro externo com extensão .css aplicando à pagina através do elemento link (link rel="stylesheet" type"text/css" href="style.css")
 
 é possível ligar várias css à mesma página, mas podem haver conflitos de estilo que o sistema resolve por aplicação de regras de precedência
+
+Regra - especifica um ou mais elementos ou um conjunto de estilo que vao ser aplicados
+
+Sintaxte de uma regra: 
+selector{
+property: value;
+}
+exemplo:
+p, h1, h2{
+    color: green;       /* ISTO É UM COMENTÀRIO EM CSS as propriedades devem ser escritas sempre em minisculas e se tiverem várias palavras devem ser ligadas por um hifen */
+}
+h2{
+    background-color: yellow;
+}
+há tres formas de especificar cores
+1. nomes predefinidos
+2. codigo rgb
+3. cores heaxdecimais
+
+propriedades p fonte
+font-family
+font-size
+font-weight
+font-style
+font /* p {
+    font:italic bold 14x "Comic Sans MS" cursive;
+} */
+
+Os tamanhos podem ser
+unidades - pixels, point, m-size
+tamanhos vagos - xx-small, small, medium
+percentuais - 90%, 120%
+
+POdemos atribuir ao elemento html um atributo designado id que o identifica e assim por exemplo mudamos a cor só de uma palavra. 
+/* #id{
+    property: value
+}
+
+<h2> id="europa"> Europa </h2>
+#europa{
+    font-style: italic;
+} */
+Quando queremos aplicar um determinado estilo a mais que um elemento usamos class 
+/* .class{
+    property: value;
+} 
+
