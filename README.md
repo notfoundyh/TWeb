@@ -1,6 +1,6 @@
 # TWeb
 
-<h1>aula 16 outubro</h1>
+---aula 16 outubro---
 
 html - hyper text markup language, é uma linguagem de marcação e não programação
 
@@ -40,7 +40,7 @@ MIME type são tipos de dados tipo GIF, MP3, JPEG etc
 
 paragrafo <p> texto do paragrafo </p>
 
-cabeçalho <h1> cabeçalho de primeiro nível </h1>
+cabeçalho h1 cabeçalho de primeiro nível h1
 
 //...até
 
@@ -59,3 +59,11 @@ tabelas <table>
 http://validator.w3.org //corrige o codigo
 
 Ao criar um ficheiro html se fizermos !+tab o visual studio da  estrutura incial 
+
+--- Aula 25 de outubro ---
+CSS - linguagem de controlo de aparência, layout e apresentação
+1. Para definir os estilos podemos usar diretamento os elementos html usando o atributo de style
+2. na secção head como um elemento style
+3. Num ficheiro externo com extensão .css aplicando à pagina através do elemento link (link rel="stylesheet" type"text/css" href="style.css")
+
+é possível ligar várias css à mesma página, mas podem haver conflitos de estilo que o sistema resolve por aplicação de regras de precedência
