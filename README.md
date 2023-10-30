@@ -100,7 +100,7 @@ unidades - pixels, point, m-size
 tamanhos vagos - xx-small, small, medium
 percentuais - 90%, 120%
 
-POdemos atribuir ao elemento html um atributo designado id que o identifica e assim por exemplo mudamos a cor só de uma palavra. 
+Podemos atribuir ao elemento html um atributo designado id que o identifica e assim por exemplo mudamos a cor só de uma palavra. 
 /* #id{
     property: value
 }
@@ -112,5 +112,7 @@ POdemos atribuir ao elemento html um atributo designado id que o identifica e as
 Quando queremos aplicar um determinado estilo a mais que um elemento usamos class 
 /* .class{
     property: value;
-} 
+} */
+
+--- Aula 30 outubro ----
 
