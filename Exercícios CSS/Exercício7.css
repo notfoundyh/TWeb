@@ -1,0 +1,20 @@
+
+div{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.back{
+    background-image: url("https://marketplace.canva.com/EAE3SCJp0Xw/2/0/1600w/canva-yellow-red-minimalist-new-happy-creative-elegant-abstract-japanese-wallpaper-desktop-wallpaper-IasJuw4UaSU.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 6px solid orange;
+    position: absolute;
+    width: 1500px;
+    height: 720px;
+
+}
