@@ -123,4 +123,163 @@ Podemos controlar o background em nivel de bloco adicionado (cores, imagens)
     background-color: lightgrey;
 */
 
+---- Aula 6 novembro ----
+Text Shadow/ Box Shadow - adicionar sombra no texto e é tido pelo deslocamento horizontal da sombra, deslocamento vertical, raio de desfoque e cor 
+/* text-shadow -4px 4px 6px dimgrey; (add shadow)
+font-size: 400% (inreasing font-size) */
+
+Border radius - fillet, um border-radius maior que a metado do comprimento lateral mais curto faz com que a extremidade fiwue completamente curva
+podemos especificar em border-top-left-radius, border-top-right-radius,border-bottom-left-radius e border-bottom-right-radius
+
+Gradientes lineares - pode se fazer transição entre quantas cores nós quisermos, chamados color-stops
+/* Dependendo do browser pode ser de maneiraa diferente pq em alguns browser pode não ser suportado por ser mais antigo mas atualmente todos suportam se for assim:
+background linear-gradient(
+    to bottom, white 15%, lightsteelblue 50%, navy 75%):
+    float: left;
+    margin-right: 15px;
+
+    Gradientes Radiais - valores a definir são top, bottom, left e riht
+    background: radial-gradient(center, yellow,red)
+    */
+Layout de multiplas colunas
+
+para criar as colunas +e usado column-count e a propriedade column-gap que dá o espaçamento entre elas
+p por uma linha a espaçar podemos usar column-rule
+
+Media-queries - define os atributos mais adequeados conforme o utilizador está a vizualizar a página - personaliza a vizualização p mobile, tablet, desktop etc
+/* criar colunas consoante o tamanho da tela
+@media handheld and (max-width: 480px),
+screen and (max-devide-widh: 480px),
+screen and (max-width: 480px)
+{
+    div{
+        column-count: 1;
+    }
+}
+Escrever isto as vezes q foram necessárias tendo em conta ps tamanhos dos dispositivos q queremos abranger
+o browser analisa a regra, o resultado é verdadeiro ou falso
+*/
+Grid - sistema de layout bidimensional trabalha horizontal e vertical, acaba por ser mais facil n é preciso usar flutuadores e posicionamento
+Flexbox - layout unidimensional, é util na alocação e alinhamento do espaço entre itens num contentor
+
+container - contem grid items
+quando usamos o estilo de grelha temos de usar 
+display:grid | inline-grid;
+vertical - linhas de colunas
+horizontal - linhas de grelhas
+os espaços chama-se células e é p por o conteúdo do website
+/*
+HTML
+<div id="layout" >
+<div id="one">Um</div>
+<div id="two">Dois</div>
+<div id="three">Três</div>
+<div id="four">Quatro</div>
+<div id="five">Cinco</div>
+</div>
+css
+#layout {
+ display: grid;
+ grid-template-rows : 100px 400px 100px;  // largura das colunas
+grid-template-columns : 200px 500px 200px;
+}
+
+para ser mais facil em vez de numeros podemos dar nomes
+#layout {
+display: grid;
+grid-template-rows: [header-start] 100px [header-end content-start] 400px [content-end footerstart] 100px;
+grid-template-columns: [anúncios] 200px [principal] 500px [links] 200px;
+*/
+A função minmax() restringe o intervalo de tamanho da trilha
+definindo uma dimensão mínima e máxima.
+min-content é o menor que uma faixa pode ter.
+max-contente aloca a quantidade máxima de espaço necessário.
+auto permite que o navegador cuide disso. Comece com auto para
+dimensionamento baseado em conteúdo.
+repeat()permite repetir padrões em tamanhos de track:
+repeat( # , track pattern)
+O primeiro número é o número de repetições. Os tamanhos das tracks após a
+vírgula fornecem o padrão.
+/* ANTES:
+grade-modelo-colunas: 200px 20px 1fr 20px 1fr 20px 1fr 20px 1fr
+20px 1fr 20px 1fr 200px;
+DEPOIS:
+grid-template-columns: 200px repeat(5, 20px 1fr) 200px ; */
+Grid areas - os nomes entre [] são opcionais é só p guiar
+/* #layout {
+display: grid;
+grid-template-rows: [header-start] 100px [content-start] 400px [footer-start] 100px;
+grid-template-columns: [anúncios] 200px [principal] 1fr [links] 200px;
+ grid-template-areas:
+"header header header"
+"ads main links"
+"footer footer footer"
+
+#one { grid-area: header; }
+#two { grid-area: ads; }
+#three { grid-area: main; }
+#four { grid-area: links; }
+#five { grid-area: footer; }
+*/
+
+grid-auto-rows
+grid-auto-column
+Especifica se você deseja que os itens fluam por linha ou coluna . O padrão
+é a direção de escrita do documento.
+#listagens {
+display: grid;
+ grid-auto-flow: column dense;
+ Use a propriedade auto-flow na propriedade de grid
+abreviada para indicar que as linhas ou colunas devem ser geradas
+automaticamente. As colunas são estabelecidas explicitamente, mas as linhas são geradas
+automaticamente.
+grid-row-gap grid-column-gap
+Grid-gap: 20px 50px;
+Layout Flexbox
+oferece maior controle sobre a organização de
+componentes de itens de página da Web ao longo de um eixo
+Vantagens do Flexbox
+• Capacidade de “flexionar” – esticar ou encolher dentro de seus containers
+• Capacidade de fazer todos os itens vizinhos da mesma altura
+• Fácil centralização horizontal e vertical
+• Capacidade de alterar a ordem de exibição dos itens independentemente da
+fonte html
+.flex-container {
+display: flex;
+}
+.flex-container {
+display: inline-flex;
+}
+/* Itens flexíveis alinhados ao longo de
+um eixo
+eixo principal -ou- eixo transversal
+O eixo principal é a direção do fluxo
+que especificou para o
+container flexível. O eixo transversal
+é perpendicular ao eixo principal 
+
+#container {
+display: flex;
+height: 350px;
+flex-flow: column wrap // é um shortcut, por a direção e depois o estilo que queremos
+*/
+Flex item - Properties
+flex item properties determines how space is distributed within items
+flex
+None | ‘flex-grow flex-shrink flex-basis’
+Flex: flex-crescer flex-encolher flex-base
+Exemplo
+li {
+flexível: 1 0 200px
+}
+Valores de 1 e 0 funcionam como on/off
+1 “liga” ou permite que um item cresça ou diminua
+0 “desliga” impede que o item cresça ou diminua
+Exemplo
+Este item da lista começa com 200px de largura
+é permitido crescer para preencher o espaço extra
+NÃO
+é permitido encolher abaixo de 200px
+
+
 
