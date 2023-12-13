@@ -2,13 +2,14 @@
 body {
     margin: 0;
     font-family: 'Montserrat Light', sans-serif;
+    background-color: rgb(4, 30, 23);
 }
 
 .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1a1956;
+    background-color: #01889F;
     padding: 10px;
 }
 
@@ -44,9 +45,10 @@ li {
 .post{
     max-width: fit-content;
     flex-wrap: wrap;
-    background-color: #1a1956;
+    background-color: rgba(1, 136, 159, 0.5);
     align-items: flex-start;
     padding: 20px;
+    border-radius: 20px;
 }
 .post h3,
 .post h2,
@@ -62,20 +64,122 @@ h2 {
 }
 
 .news{
-    background-color: rgb(184, 184, 184);
+    background-color: rgba(132, 132, 132, 0.5);
     padding: 20px;
     height: min-content;
+    border-radius: 20px;
 }
 
 .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1a1956;
+    background-color: #01889F;
     padding: 10px;
 }
 
 .footer h3{
     color: white;
 }
+#menu-toggle {
+    display: none;
+}
 
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 1px;
+    background-color: white;
+    margin: 6px 0;
+    
+}
+
+#menu-toggle:checked + .hamburger-menu {
+    display: none;
+}
+
+.menu nav {
+    display: block;
+}
+
+#menu-toggle:checked + .hamburger-menu + .menu nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #01889F;
+}
+
+#menu-toggle:checked + .hamburger-menu + .menu nav ol li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .menu img {
+        width: 50px; 
+    }
+
+    .menu h1, .menu nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu ol {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #01889F6;
+    }
+
+    .menu ol li {
+        margin: 10px 0;
+    }
+
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column{
+        width: fit-content;
+    }
+
+    .post, .news {
+        padding: 10px;
+    }
+
+    .post h3,
+    .post h2,
+    .post p,
+    .post h4,
+    .post h5 {
+        max-width: none;
+    }
+
+    .footer h3{
+        display: none;
+    }
+
+    .footer{
+        padding: 50px;
+    }
+
+    .footer nav ol{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
