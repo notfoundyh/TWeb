@@ -5,6 +5,21 @@ body {
     background-color: rgb(4, 30, 23);
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo{
+    transition: transform 0.5s ease;
+}
+.logo:hover{
+    animation: rotate 2s infinite linear;
+}
 .menu {
     display: flex;
     align-items: center;
@@ -26,6 +41,7 @@ ol {
     display: flex;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 li {
