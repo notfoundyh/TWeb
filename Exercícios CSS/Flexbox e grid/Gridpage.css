@@ -1,4 +1,4 @@
-body{
+body {
     margin: 50px;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
@@ -14,31 +14,47 @@ body{
     background-color: #222223;
 }
 
-h1{
+h1 {
     grid-area: h1;
     font-size: 200px;
     text-align: center;
     color: whitesmoke;
-
 }
 
-h3,h4, label
-{
+h3, h4, label {
     color: whitesmoke;
     font-weight: lighter;
     font-weight: 500;
 }
 
-.menu {
-    grid-area: hd;
-    background-color: #222223;
+menu {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.menu a {
+    display: block;
+    color: white;
     padding: 10px;
+    text-decoration: none;
+}
+
+.menu.show {
+    display: block;
 }
 
 .hamburger {
     display: none;
     cursor: pointer;
     padding: 10px;
+    position: relative;
 }
 
 .bar {
@@ -59,51 +75,50 @@ ol {
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
+
 li {
     display: inline-block;
     margin-right: 20px;
-    
 }
 
-li a{
+li a {
     text-decoration: none;
     color: azure;
 }
 
-li a:hover{
-    color: #ffcc00; 
+li a:hover {
+    color: #ffcc00;
 }
 
-.container{
+.container {
     grid-area: main;
     display: grid;
     gap: 10px;
     grid-template-rows: repeat(3, 1fr);
 }
 
-.main{
+.main {
     justify-content: center;
 }
 
-.main img{
+.main img {
     width: 100%;
     height: auto;
     border-radius: 15px;
 }
 
-.sidebar{
+.sidebar {
     grid-area: sd;
-    background-color:rgba(216, 192, 192, 0.233) ;
+    background-color: rgba(216, 192, 192, 0.233);
     padding: 20px;
     border-radius: 15px;
     width: fit-content;
     height: min-content;
-    justify-self:end;
+    justify-self: end;
 }
 
-button{
+button {
     display: grid;
     border-radius: 20px;
     padding: 10px;
@@ -111,69 +126,70 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    color:blue;
+button:hover {
+    color: blue;
 }
-input{
+
+input {
     display: grid;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
 }
 
-
-.footer{
+.footer {
     grid-area: ft;
     justify-self: end;
 }
 
-.footer ol{
+.footer ol {
     color: white;
     text-align: end;
 }
+
 @media screen and (max-width: 600px) {
     body {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+        gap: 50px;
     }
 
     h1 {
-        font-size: 100px; 
+        padding: 50px;
+        font-size: 60px;
     }
 
-    @media screen and (max-width: 600px) {
-        .menu-nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    
-        .hamburger {
-            display: block;
-            font-size: 24px;
-        }
-    
-        .menu {
-            display: none;
-            width: 100%;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            background-color: #333;
-            padding: 20px;
-            box-sizing: border-box;
-            z-index: 1;
-        }
-    
-        .menu a {
-            display: block;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-        }
-    
-        .menu.show {
-            display: block;
-        }
+    .menu-nav {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+    }
+
+    .menu {
+        display: block;
+        width: 100%;
+        position:static;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    .menu a {
+        display: none;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .menu.show {
+        display: block;
     }
 }
+
 
