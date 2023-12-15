@@ -1,17 +1,17 @@
 body{
-    margin: 0;
+    margin: 50px;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(50px, auto);
     grid-template-areas:
-      "hd hd hd"
-      "h1 h1 h1"
-      "main sd sd"
-      "main sd sd"
-      "ft ft ft ";
-      background-color: #222223;
+        "hd hd hd"
+        "h1 h1 h1"
+        "main sd sd"
+        "main sd sd"
+        "ft ft ft";
+    background-color: #222223;
 }
 
 h1{
@@ -22,10 +22,30 @@ h1{
 
 }
 
+h3,h4, label
+{
+    color: whitesmoke;
+    font-weight: lighter;
+    font-weight: 500;
+}
+
 .menu {
     grid-area: hd;
     background-color: #222223;
     padding: 10px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
 }
 
 nav {
@@ -56,26 +76,104 @@ li a:hover{
     color: #ffcc00; 
 }
 
-}
 .container{
-gap: 10px;
+    grid-area: main;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .main{
-    grid-area: main; 
+    justify-content: center;
 }
 
 .main img{
-    width: 700px;
+    width: 100%;
     height: auto;
     border-radius: 15px;
 }
 
 .sidebar{
     grid-area: sd;
+    background-color:rgba(216, 192, 192, 0.233) ;
+    padding: 20px;
+    border-radius: 15px;
+    width: fit-content;
+    height: min-content;
+    justify-self:end;
 }
+
+button{
+    display: grid;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+}
+
+button:hover{
+    color:blue;
+}
+input{
+    display: grid;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
 
 .footer{
     grid-area: ft;
+    justify-self: end;
+}
+
+.footer ol{
+    color: white;
+    text-align: end;
+}
+@media screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr; 
+    }
+
+    h1 {
+        font-size: 100px; 
+    }
+
+    @media screen and (max-width: 600px) {
+        .menu-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .hamburger {
+            display: block;
+            font-size: 24px;
+        }
+    
+        .menu {
+            display: none;
+            width: 100%;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            background-color: #333;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+    
+        .menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+    
+        .menu.show {
+            display: block;
+        }
+    }
 }
 
