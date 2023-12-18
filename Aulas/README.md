@@ -281,5 +281,23 @@ Este item da lista começa com 200px de largura
 NÃO
 é permitido encolher abaixo de 200px
 
+Aula 18 dezembro
+Frameworks (nós vamos usar o bootstrap)
+Frameworks são conjuntos de estilos já predifinidos e reutilizaveis p website e app web
+bootstrap
+bluma
+tailwind
+materialize - é da google
+
+no bootstrap tem tres tipos de containers
+.container wich sets a max widh at each responsive breakpoint
+.container-fluid, wich is widh: 100% at all breakpoints
+.container-{breakpoint}
+
+.container sm/md/lg/xl/xxl/fluid (são os tipos de container)
+
+No bootstrap só podemos ter 12 colunas máximo por row
+
+
 
 
